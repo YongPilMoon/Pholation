@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from 'containers/base/Header';
 import MainPage from 'components/page/MainPage';
-import SignupModal from 'components/modals/SignupModal';
+import SignupModal from 'containers/modals/SignupModal';
 
 //redux
 import {connect} from 'react-redux';
@@ -22,14 +22,18 @@ class App extends Component {
     }
   })();
 
+  submit = (value) => {
+    console.log(value)
+  };
+
   render() {
     const { modal } = this.props.status;
-    const { handleModal } = this;
+    const { handleModal, submit } = this;
     return (
         <div className="App">
           <MainPage/>
           <Header onClick={() =>  handleModal.open({modalName: 'signup'})}/>
-          <SignupModal visible={modal.getIn(['signup','open'])} onHide={() => handleModal.close('signup')}/>
+          <SignupModal visible={modal.getIn(['signup','open'])} onHide={() => handleModal.close('signup')} onSubmit={submit}/>
         </div>
     );
   }

@@ -6,7 +6,7 @@ const Logo = () => {
       <div>
         <div className="logo-wrapper">
           <Link to={"/"}>
-            로고
+            PHOLATION
           </Link>
         </div>
       </div>

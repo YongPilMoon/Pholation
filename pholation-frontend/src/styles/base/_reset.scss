@@ -1,5 +1,11 @@
 body {
   background-color: #fff;
-  margin: 0;
   font-family: 'Noto Sans KR', sans-serif;
+}
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,legend,button, form,fieldset,input,textarea,p,blockquote,th,td {
+  padding: 0;
+  margin: 0;
+  box-sizing:border-box;  //border 값을 box size에 포함한다.
+  -moz-box-sizing:border-box;
 }
